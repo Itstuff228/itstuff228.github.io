@@ -1,0 +1,81 @@
+User-agent: *
+Allow: /
+Disallow: /admin/
+Disallow: /cgi-bin/
+Disallow: /search/
+Disallow: /*.pdf$
+Disallow: /*.zip$
+Disallow: /*.exe$
+
+# Разрешаем индексацию основных разделов
+Allow: /index.html
+Allow: /guide_main.html
+Allow: /guide_card_basic.html
+Allow: /forum.html
+
+# Скорость сканирования
+Crawl-delay: 2
+
+# Sitemap
+Sitemap: https://deadlock-guides.ru/sitemap.xml
+Sitemap: https://deadlock-guides.ru/sitemap-index.xml
+
+# Поисковые системы
+User-agent: Googlebot
+Allow: /
+Disallow: /admin/
+Crawl-delay: 1
+
+User-agent: Yandex
+Allow: /
+Disallow: /admin/
+Clean-param: ref /forum.html
+Clean-param: sessionid /forum.html
+
+User-agent: bingbot
+Allow: /
+Disallow: /admin/
+Crawl-delay: 2
+
+# Боты соцсетей для шеринга
+User-agent: FacebookExternalHit
+Allow: /
+Disallow: /admin/
+Crawl-delay: 1
+
+User-agent: Twitterbot
+Allow: /
+Disallow: /admin/
+Crawl-delay: 1
+
+User-agent: VKExternalHit
+Allow: /
+Disallow: /admin/
+Crawl-delay: 1
+
+# Запрет плохих ботов
+User-agent: MJ12bot
+Disallow: /
+
+User-agent: AhrefsBot
+Disallow: /
+
+User-agent: SemrushBot
+Disallow: /
+
+User-agent: DotBot
+Disallow: /
+
+User-agent: MauiBot
+Disallow: /
+
+# Разрешение для Google Image
+User-agent: Googlebot-Image
+Allow: /images/
+Allow: /jpg/
+Disallow: /admin/
+
+# Разрешение для Google Ads
+User-agent: AdsBot-Google
+Allow: /
+Disallow: /admin/

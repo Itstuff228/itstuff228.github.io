@@ -1,0 +1,1105 @@
+
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Deadlock Guides - Полные гайды по игре Deadlock 2026 | Тактики, сборки, герои</title>
+    <meta name="description" content="⚡ Полное русскоязычное руководство по Deadlock. Гайды для новичков и продвинутых игроков, сборки на героев, тактики, обсуждения на форуме. Стань профессионалом в Deadlock!">
+    <meta name="keywords" content="deadlock гайды, deadlock руководство, deadlock тактики, deadlock герои, deadlock сборки, deadlock форум, deadlock 2025">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://deadlock-guides.ru/">
+    <meta property="og:title" content="Deadlock Guides - Полные гайды по игре Deadlock">
+    <meta property="og:description" content="Русскоязычное сообщество по Deadlock: гайды, тактики и сборки">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://deadlock-guides.ru/">
+    
+    <!-- Убрали jQuery динамическую загрузку -->
+    <link rel="stylesheet" href="css/style.css">
+    
+    <!-- Schema.org markup -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "WebSite",
+        "name": "Deadlock Guides",
+        "description": "Русскоязычное сообщество и гайды по игре Deadlock",
+        "url": "https://deadlock-guides.ru/",
+        "potentialAction": {
+            "@type": "SearchAction",
+            "target": "https://deadlock-guides.ru/search?q={search_term_string}",
+            "query-input": "required name=search_term_string"
+        }
+    }
+    </script>
+</head>
+<body itemscope itemtype="https://schema.org/WebPage">
+    
+
+    <!-- Статический хедер (будет на всех страницах) -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <a href="index.html" class="nav-logo">
+                <span>DEADLOCK GUIDES</span>
+            </a>
+
+            <div class="nav-menu">
+                <a href="index.html" class="nav-link">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                        <path d="M10 20v-6h4v6h5v-8h3L12 3 2 12h3v8z"/>
+                    </svg>
+                    Главная
+                </a>
+                <!-- <a href="all_heroes.html" class="nav-link">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                        <path d="M12 12c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm0 2c-2.67 0-8 1.34-8 4v2h16v-2c0-2.66-5.33-4-8-4z"/>
+                    </svg>
+                    Герои
+                </a> -->
+                <a href="guide_main.html" class="nav-link">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                        <path d="M18 2H6c-1.1 0-2 .9-2 2v16c0 1.1.9 2 2 2h12c1.1 0 2-.9 2-2V4c0-1.1-.9-2-2-2zM6 4h5v8l-2.5-1.5L6 12V4z"/>
+                    </svg>
+                    Гайды
+                </a>
+                <a href="forum.html" class="nav-link">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                        <path d="M20 2H4c-1.1 0-1.99.9-1.99 2L2 22l4-4h14c1.1 0 2-.9 2-2V4c0-1.1-.9-2-2-2zm-2 12H6v-2h12v2zm0-3H6V9h12v2zm0-3H6V6h12v2z"/>
+                    </svg>
+                    Форум
+                </a>
+            </div>
+
+            <div class="nav-auth">
+                <a href="login.html" class="btn btn-secondary btn-sm">
+                    <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
+                        <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-1 16H7v-2h4v2zm5.25-4.5H7v-2h10.25v2z"/>
+                    </svg>
+                    Войти
+                </a>
+                <a href="register.html" class="btn btn-primary btn-sm">
+                    <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
+                        <path d="M19 13h-6v6h-2v-6H5v-2h6V5h2v6h6v2z"/>
+                    </svg>
+                    Регистрация
+                </a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Основной контент главной страницы -->
+    <main>
+
+         <!-- Хлебные крошки -->
+        <nav class="breadcrumb">
+            <div class="breadcrumb-item">
+                <a class="breadcrumb-link" href="index.html">Главная</a>
+                <span class="breadcrumb-separator">/</span>
+                <span class="breadcrumb-current" href="guide_main.html">Гайды по Deadlock</span>
+            </div>
+        </nav>
+
+        <!-- Hero Section -->
+        <!-- <section class="hero-banner">
+            <div class="hero-content">
+                <h1>ГАЙДЫ ПО DEADLOCK</h1>
+                <p class="hero-subtitle">
+                    Полное руководство по игре Deadlock. От основ геймплея до продвинутых тактик. 
+                    Стань мастером игры вместе с нашим сообществом!
+                </p>
+            </div>
+        </section> -->
+
+        <!-- Основной контент -->
+        <div class="container">
+            <!-- Фильтры категорий -->
+            <div class="category-filters">
+                <button class="filter-btn active" data-category="all">Все гайды</button>
+                <button class="filter-btn" data-category="beginner">Для новичков</button>
+                <button class="filter-btn" data-category="advanced">Продвинутые</button>
+                <button class="filter-btn" data-category="heroes">Сборки героев</button>
+                <button class="filter-btn" data-category="updates">Обновления</button>
+            </div>
+
+            <!-- Сетка карточек гайдов -->
+            <div class="guides-grid">
+                <!-- Карточка гайда 1 -->
+                
+                <div class="guide-card" data-category="beginner" onclick="window.location.href='guide_card_basic.html'">
+                    <div class="guide-image">
+                        <div class="guide-category">Основы</div>
+                        <div class="guide-image-placeholder" style="background: linear-gradient(135deg, #00ff88, #7b61ff); display: flex; align-items: center; justify-content: center; color: white; font-size: 2rem;">
+                            ⚡
+                        </div>
+                    </div>
+                    <div class="guide-content">
+                        <h3 class="guide-title">Базовое руководство по Deadlock</h3>
+                        <p class="guide-description">Полное руководство для начинающих игроков. Основы геймплея, управления и механики игры.</p>
+                        <div class="guide-meta">
+                            <div class="guide-difficulty">
+                                <span>Сложность:</span>
+                                <div class="difficulty-dots">
+                                    <div class="dot active"></div>
+                                    <div class="dot"></div>
+                                    <div class="dot"></div>
+                                </div>
+                            </div>
+                            <div class="guide-read-time">
+                                <span>15 мин</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Карточка гайда 2 -->
+                <div class="guide-card" data-category="beginner">
+                    <div class="guide-image">
+                        <div class="guide-category">Настройки</div>
+                        <div class="guide-image-placeholder" style="background: linear-gradient(135deg, #ff2d75, #7b61ff); display: flex; align-items: center; justify-content: center; color: white; font-size: 2rem;">
+                            🎮
+                        </div>
+                    </div>
+                    <div class="guide-content">
+                        <h3 class="guide-title">Оптимальные настройки графики</h3>
+                        <p class="guide-description">Настройте графику и управление для максимальной производительности и комфортной игры.</p>
+                        <div class="guide-meta">
+                            <div class="guide-difficulty">
+                                <span>Сложность:</span>
+                                <div class="difficulty-dots">
+                                    <div class="dot active"></div>
+                                    <div class="dot"></div>
+                                    <div class="dot"></div>
+                                </div>
+                            </div>
+                            <div class="guide-read-time">
+                                <span>10 мин</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Карточка гайда 3 -->
+                <div class="guide-card" data-category="beginner">
+                    <div class="guide-image">
+                        <div class="guide-category">Экономика</div>
+                        <div class="guide-image-placeholder" style="background: linear-gradient(135deg, #ffd700, #ff2d75); display: flex; align-items: center; justify-content: center; color: white; font-size: 2rem;">
+                            💰
+                        </div>
+                    </div>
+                    <div class="guide-content">
+                        <h3 class="guide-title">Экономика игры: заработок и траты</h3>
+                        <p class="guide-description">Как эффективно зарабатывать ресурсы и правильно их тратить для максимальной выгоды.</p>
+                        <div class="guide-meta">
+                            <div class="guide-difficulty">
+                                <span>Сложность:</span>
+                                <div class="difficulty-dots">
+                                    <div class="dot active"></div>
+                                    <div class="dot"></div>
+                                    <div class="dot"></div>
+                                </div>
+                            </div>
+                            <div class="guide-read-time">
+                                <span>12 мин</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Карточка гайда 4 -->
+                <div class="guide-card" data-category="advanced">
+                    <div class="guide-image">
+                        <div class="guide-category">Тактика</div>
+                        <div class="guide-image-placeholder" style="background: linear-gradient(135deg, #00ccff, #7b61ff); display: flex; align-items: center; justify-content: center; color: white; font-size: 2rem;">
+                            🎯
+                        </div>
+                    </div>
+                    <div class="guide-content">
+                        <h3 class="guide-title">Контроль карты и позиционирование</h3>
+                        <p class="guide-description">Продвинутые техники контроля карты, ротации и правильного позиционирования в бою.</p>
+                        <div class="guide-meta">
+                            <div class="guide-difficulty">
+                                <span>Сложность:</span>
+                                <div class="difficulty-dots">
+                                    <div class="dot active"></div>
+                                    <div class="dot active"></div>
+                                    <div class="dot"></div>
+                                </div>
+                            </div>
+                            <div class="guide-read-time">
+                                <span>18 мин</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Карточка гайда 5 -->
+                <div class="guide-card" data-category="advanced">
+                    <div class="guide-image">
+                        <div class="guide-category">Команда</div>
+                        <div class="guide-image-placeholder" style="background: linear-gradient(135deg, #00ff88, #00ccff); display: flex; align-items: center; justify-content: center; color: white; font-size: 2rem;">
+                            🔄
+                        </div>
+                    </div>
+                    <div class="guide-content">
+                        <h3 class="guide-title">Командная игра: синергия и комбинации</h3>
+                        <p class="guide-description">Как эффективно работать в команде, создавать синергию и использовать комбинации способностей.</p>
+                        <div class="guide-meta">
+                            <div class="guide-difficulty">
+                                <span>Сложность:</span>
+                                <div class="difficulty-dots">
+                                    <div class="dot active"></div>
+                                    <div class="dot active"></div>
+                                    <div class="dot"></div>
+                                </div>
+                            </div>
+                            <div class="guide-read-time">
+                                <span>20 мин</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Карточка гайда 6 -->
+                <div class="guide-card" data-category="heroes">
+                    <div class="guide-image">
+                        <div class="guide-category">Сборки</div>
+                        <div class="guide-image-placeholder" style="background: linear-gradient(135deg, #ff2d75, #ffd700); display: flex; align-items: center; justify-content: center; color: white; font-size: 2rem;">
+                            ⚔️
+                        </div>
+                    </div>
+                    <div class="guide-content">
+                        <h3 class="guide-title">Лучшие сборки для танков</h3>
+                        <p class="guide-description">Оптимальные билды и предметы для героев-танков в текущей мете.</p>
+                        <div class="guide-meta">
+                            <div class="guide-difficulty">
+                                <span>Сложность:</span>
+                                <div class="difficulty-dots">
+                                    <div class="dot active"></div>
+                                    <div class="dot"></div>
+                                    <div class="dot"></div>
+                                </div>
+                            </div>
+                            <div class="guide-read-time">
+                                <span>14 мин</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Карточка гайда 7 -->
+                <div class="guide-card" data-category="heroes">
+                    <div class="guide-image">
+                        <div class="guide-category">Сборки</div>
+                        <div class="guide-image-placeholder" style="background: linear-gradient(135deg, #7b61ff, #00ccff); display: flex; align-items: center; justify-content: center; color: white; font-size: 2rem;">
+                            🏹
+                        </div>
+                    </div>
+                    <div class="guide-content">
+                        <h3 class="guide-title">Сборки для героев дальнего боя</h3>
+                        <p class="guide-description">Эффективные билды для снайперов и стрелков с разбором ситуационных предметов.</p>
+                        <div class="guide-meta">
+                            <div class="guide-difficulty">
+                                <span>Сложность:</span>
+                                <div class="difficulty-dots">
+                                    <div class="dot active"></div>
+                                    <div class="dot active"></div>
+                                    <div class="dot"></div>
+                                </div>
+                            </div>
+                            <div class="guide-read-time">
+                                <span>16 мин</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Карточка гайда 8 -->
+                <div class="guide-card" data-category="updates">
+                    <div class="guide-image">
+                        <div class="guide-category">Обновления</div>
+                        <div class="guide-image-placeholder" style="background: linear-gradient(135deg, #00ff88, #ffd700); display: flex; align-items: center; justify-content: center; color: white; font-size: 2rem;">
+                            📝
+                        </div>
+                    </div>
+                    <div class="guide-content">
+                        <h3 class="guide-title">Патч 0.5: полный разбор изменений</h3>
+                        <p class="guide-description">Детальный анализ всех изменений в последнем обновлении и их влияние на мету.</p>
+                        <div class="guide-meta">
+                            <div class="guide-difficulty">
+                                <span>Сложность:</span>
+                                <div class="difficulty-dots">
+                                    <div class="dot active"></div>
+                                    <div class="dot"></div>
+                                    <div class="dot"></div>
+                                </div>
+                            </div>
+                            <div class="guide-read-time">
+                                <span>22 мин</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Пагинация -->
+            <div class="pagination">
+                <button class="page-btn">←</button>
+                <button class="page-btn active">1</button>
+                <button class="page-btn">2</button>
+                <button class="page-btn">3</button>
+                <button class="page-btn">→</button>
+            </div>
+        </div>
+
+        
+    </main>
+   
+
+    <!-- Статический футер (будет на всех страницах) -->
+    <footer class="footer" role="contentinfo">
+        <div class="footer-container">
+            <!-- Основные разделы -->
+            <div class="footer-sections">
+                <!-- Навигация -->
+                <div class="footer-section">
+                    <h3 class="footer-title">Навигация</h3>
+                    <ul class="footer-links">
+                        <li><a href="#" onclick="$('#main').load('./html/main_page.html');">Главная</a></li>
+                        <li><a href="#" onclick="$('#main').load('./html/all_heroes.html');">Все герои</a></li>
+                        <li><a href="#" onclick="$('#main').load('./html/guide_basic.html');">Гайды</a></li>
+                        <li><a href="#" onclick="$('#main').load('./html/forum.html');">Форум</a></li>
+                        <li><a href="#" onclick="$('#main').load('./html/strategies.html');">Стратегии</a></li>
+                        <li><a href="#" onclick="$('#main').load('./html/updates.html');">Обновления</a></li>
+                    </ul>
+                </div>
+
+                <!-- Герои -->
+                <div class="footer-section">
+                    <h3 class="footer-title">Популярные герои</h3>
+                    <ul class="footer-links">
+                        <li><a href="#" onclick="$('#main').load('./html/hero_kane.html');">Kane</a></li>
+                        <li><a href="#" onclick="$('#main').load('./html/hero_lynx.html');">Lynx</a></li>
+                        <li><a href="#" onclick="$('#main').load('./html/hero_wraith.html');">Wraith</a></li>
+                        <li><a href="#" onclick="$('#main').load('./html/hero_titan.html');">Titan</a></li>
+                        <li><a href="#" onclick="$('#main').load('./html/hero_aurora.html');">Aurora</a></li>
+                        <li><a href="#" onclick="$('#main').load('./html/all_heroes.html');">Все герои →</a></li>
+                    </ul>
+                </div>
+
+                <!-- Сообщество -->
+                <div class="footer-section">
+                    <h3 class="footer-title">Сообщество</h3>
+                    <ul class="footer-links">
+                        <li><a href="#" onclick="$('#main').load('./html/forum.html');">Форум</a></li>
+                        <li><a href="#" onclick="$('#main').load('./html/leaderboard.html');">Таблица лидеров</a></li>
+                        <li><a href="#" onclick="$('#main').load('./html/streams.html');">Стримы</a></li>
+                        <li><a href="#" onclick="$('#main').load('./html/events.html');">События</a></li>
+                        <li><a href="#" onclick="$('#main').load('./html/contribute.html');">Внести вклад</a></li>
+                    </ul>
+                </div>
+
+                <!-- Ресурсы -->
+                <div class="footer-section">
+                    <h3 class="footer-title">Ресурсы</h3>
+                    <ul class="footer-links">
+                        <li><a href="#" onclick="$('#main').load('./html/beginner_guides.html');">Для новичков</a></li>
+                        <li><a href="#" onclick="$('#main').load('./html/advanced_guides.html');">Продвинутые гайды</a></li>
+                        <li><a href="#" onclick="$('#main').load('./html/patch_notes.html');">Патч-ноуты</a></li>
+                        <li><a href="#" onclick="$('#main').load('./html/downloads.html');">Загрузки</a></li>
+                        <li><a href="#" onclick="$('#main').load('./html/tools.html');">Инструменты</a></li>
+                    </ul>
+                </div>
+
+                <!-- О проекте -->
+                <div class="footer-section">
+                    <h3 class="footer-title">О проекте</h3>
+                    <ul class="footer-links">
+                        <li><a href="#" onclick="$('#main').load('./html/about.html');">О нас</a></li>
+                        <li><a href="#" onclick="$('#main').load('./html/contact.html');">Контакты</a></li>
+                        <li><a href="#" onclick="$('#main').load('./html/rules.html');">Правила</a></li>
+                        <li><a href="#" onclick="$('#main').load('./html/privacy.html');">Конфиденциальность</a></li>
+                        <li><a href="#" onclick="$('#main').load('./html/terms.html');">Условия использования</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Социальные сети и подписка -->
+            <!-- <div class="footer-community">
+                <div class="community-content">
+                    <div class="social-section">
+                        <h3 class="footer-title">Присоединяйтесь к сообществу</h3>
+                        <p>Следите за обновлениями и общайтесь с другими игроками</p>
+                        
+                        <div class="social-links">
+                            <a href="#" class="social-link discord" aria-label="Discord">
+                                <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
+                                    <path d="M18.59 5.89c-1.44-1.44-3.11-2.56-4.95-3.26-.23-.09-.49-.09-.72 0-1.84.7-3.51 1.82-4.95 3.26-1.44 1.44-2.56 3.11-3.26 4.95-.09.23-.09.49 0 .72.7 1.84 1.82 3.51 3.26 4.95 1.44 1.44 3.11 2.56 4.95 3.26.23.09.49.09.72 0 1.84-.7 3.51-1.82 4.95-3.26 1.44-1.44 2.56-3.11 3.26-4.95.09-.23.09-.49 0-.72-.7-1.84-1.82-3.51-3.26-4.95z"/>
+                                </svg>
+                                Discord
+                            </a>
+                            <a href="#" class="social-link telegram" aria-label="Telegram">
+                                <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
+                                    <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm4.64 6.8c-.15 1.58-.78 5.42-.97 7.19-.14 1.22-.84 1.5-1.38 1.5-.68 0-1.07-.45-1.65-.88-.92-.67-1.44-1.08-2.34-1.73-1.03-.73-.36-1.13.22-1.78.15-.16 2.71-2.48 2.76-2.69.01-.03.01-.14-.06-.2-.07-.06-.17-.04-.24-.02-.1.03-1.78 1.14-5.02 3.35-.48.33-.92.49-1.32.48-.43-.01-1.25-.24-1.86-.44-.75-.24-1.35-.37-1.3-.78.03-.2.25-.41.69-.62 2.66-1.16 4.43-1.94 5.3-2.33 2.5-1.04 3.02-1.22 3.36-1.22.08 0 .27.02.39.12.1.08.13.19.14.27-.01.06.01.24 0z"/>
+                                </svg>
+                                Telegram
+                            </a>
+                            <a href="#" class="social-link youtube" aria-label="YouTube">
+                                <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
+                                    <path d="M19.615 3.184c-3.604-.246-11.631-.245-15.23 0-3.897.266-4.356 2.62-4.385 8.816.029 6.185.484 8.549 4.385 8.816 3.6.245 11.626.246 15.23 0 3.897-.266 4.356-2.62 4.385-8.816-.029-6.185-.484-8.549-4.385-8.816zm-10.615 12.816v-8l8 3.993-8 4.007z"/>
+                                </svg>
+                                YouTube
+                            </a>
+                            <a href="#" class="social-link vk" aria-label="VK">
+                                <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
+                                    <path d="M15.07 2H8.93C3.33 2 2 3.33 2 8.93v6.14C2 20.67 3.33 22 8.93 22h6.14c5.6 0 6.93-1.33 6.93-6.93V8.93C22 3.33 20.67 2 15.07 2m-1.76 15.14c-1.37 0-1.88-.91-2.67-1.86-.56.91-1.25 1.86-2.67 1.86-1.39 0-1.85-.91-1.85-1.85 0-.42.14-.77.42-1.05.56-.56 1.53-.7 2.39-.7.56 0 1.12.14 1.68.28l.56-1.12c-.56-.21-1.19-.35-1.89-.35-1.39 0-2.65.49-2.65 1.96 0 .91.49 1.54 1.4 1.54 1.12 0 1.68-.91 2.39-1.96.56-.84 1.12-1.82 2.23-1.82.7 0 .91.35.91.91 0 .49-.21.84-.56 1.26-.35.42-.7.77-.91 1.12-.28.49-.28.91-.28 1.4 0 .77.35 1.12 1.12 1.12.91 0 1.54-.49 2.09-1.12l.91 1.12c-.77.91-1.68 1.4-2.93 1.4zm4.51-6.16h-1.68v1.68h1.68v1.68h-1.68v1.68h-1.68v-1.68h-1.68v-1.68h1.68V11h-1.68V9.32h1.68V7.64h1.68v1.68h1.68V11z"/>
+                                </svg>
+                                VK
+                            </a>
+                        </div>
+                    </div>
+
+                    <div class="newsletter-section">
+                        <h3 class="footer-title">Будьте в курсе обновлений</h3>
+                        <p>Получайте уведомления о новых гайдах и изменениях в игре</p>
+                        
+                        <form class="newsletter-form" onsubmit="subscribeNewsletter(event)">
+                            <div class="input-group">
+                                <input type="email" placeholder="your.email@example.com" required 
+                                    class="newsletter-input">
+                                <button type="submit" class="newsletter-btn">
+                                    <span>Подписаться</span>
+                                    <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                                        <path d="M2.01 21L23 12 2.01 3 2 10l15 2-15 2z"/>
+                                    </svg>
+                                </button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div> -->
+
+            
+            <div class="footer-bottom">
+                <div class="footer-info">
+                    <div class="footer-logo">
+                        <!-- <img src="images/logo.png" alt="Deadlock Guides" loading="lazy"> -->
+                        <span>DEADLOCK GUIDES</span>
+                    </div>
+                    
+                    <div class="footer-meta">
+                        <p>&copy; 2025 Deadlock Guides. Все права защищены.</p>
+                        
+                        <p>Мы не аффилированы с разработчиками игры. Все гайды создаются сообществом.</p>
+                    </div>
+                </div>
+
+                <div class="footer-stats">
+                    <div class="stat-item">
+                        <div class="stat-number" id="online-count">1,247</div>
+                        <div class="stat-label">сейчас онлайн</div>
+                    </div>
+                    <div class="stat-item">
+                        <div class="stat-number" id="guides-count">356</div>
+                        <div class="stat-label">активных гайдов</div>
+                    </div>
+                    <div class="stat-item">
+                        <div class="stat-number" id="members-count">12.8k</div>
+                        <div class="stat-label">участников</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+    
+    
+    <script src="js/main.js"></script>
+    <script>
+        // Фильтрация по категориям
+        document.querySelectorAll('.filter-btn').forEach(button => {
+            button.addEventListener('click', function() {
+                // Убираем активный класс у всех кнопок
+                document.querySelectorAll('.filter-btn').forEach(btn => {
+                    btn.classList.remove('active');
+                });
+                
+                // Добавляем активный класс текущей кнопке
+                this.classList.add('active');
+                
+                const category = this.getAttribute('data-category');
+                const guides = document.querySelectorAll('.guide-card');
+                
+                guides.forEach(guide => {
+                    if (category === 'all' || guide.getAttribute('data-category') === category) {
+                        guide.style.display = 'block';
+                    } else {
+                        guide.style.display = 'none';
+                    }
+                });
+            });
+        });
+
+        // Обработка кликов по карточкам гайдов
+        document.querySelectorAll('.guide-card').forEach(card => {
+            card.addEventListener('click', function() {
+                const title = this.querySelector('.guide-title').textContent;
+                alert(`Открывается гайд: ${title}`);
+                // Здесь можно добавить логику загрузки конкретного гайда
+            });
+        });
+
+        // Обработка пагинации
+        document.querySelectorAll('.page-btn').forEach(button => {
+            button.addEventListener('click', function() {
+                if (this.textContent !== '←' && this.textContent !== '→') {
+                    document.querySelectorAll('.page-btn').forEach(btn => {
+                        btn.classList.remove('active');
+                    });
+                    this.classList.add('active');
+                }
+                // Здесь можно добавить логику перехода между страницами
+            });
+        });
+    </script>
+</body>
+</html>
+
+<style>
+        :root {
+            /* Colors */
+            --primary: #00ff88;
+            --primary-dark: #00cc6a;
+            --primary-light: #66ffb8;
+            --secondary: #7b61ff;
+            --secondary-dark: #5d45e6;
+            --accent: #ff2d75;
+            --accent-dark: #e60058;
+            
+            /* Background */
+            --dark: #0a0a0f;
+            --dark-gray: #1a1a2e;
+            --medium-gray: #2d2d44;
+            --light-gray: #4a4a6a;
+            --card-bg: rgba(26, 26, 46, 0.8);
+            
+            /* Text */
+            --text: #ffffff;
+            --text-secondary: #b8b8d0;
+            --text-muted: #8a8aa3;
+            
+            /* Gradients */
+            --gradient: linear-gradient(135deg, var(--primary) 0%, var(--secondary) 100%);
+            --gradient-dark: linear-gradient(135deg, var(--primary-dark) 0%, var(--secondary-dark) 100%);
+            --gradient-text: linear-gradient(135deg, var(--primary) 0%, var(--secondary) 50%, var(--accent) 100%);
+            
+            /* Effects */
+            --glow: 0 0 20px rgba(0, 255, 136, 0.3);
+            --glow-secondary: 0 0 20px rgba(123, 97, 255, 0.3);
+            --glow-accent: 0 0 20px rgba(255, 45, 117, 0.3);
+            --shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+            --shadow-hover: 0 12px 40px rgba(0, 0, 0, 0.4);
+            
+            /* Borders */
+            --border-radius: 16px;
+            --border-radius-sm: 12px;
+            --border-radius-lg: 20px;
+            
+            /* Transitions */
+            --transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+            --transition-slow: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+            background: var(--dark);
+            color: var(--text);
+            line-height: 1.6;
+            overflow-x: hidden;
+            background-image: 
+                radial-gradient(circle at 10% 20%, rgba(0, 255, 136, 0.03) 0%, transparent 25%),
+                radial-gradient(circle at 90% 80%, rgba(123, 97, 255, 0.03) 0%, transparent 25%),
+                radial-gradient(circle at 50% 50%, rgba(255, 45, 117, 0.02) 0%, transparent 50%);
+        }
+
+        h1, h2, h3, h4, h5, h6 {
+            font-family: 'Orbitron', monospace;
+            font-weight: 700;
+            line-height: 1.2;
+            background: var(--gradient-text);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            margin-bottom: 1rem;
+        }
+
+        h1 {
+            font-size: clamp(2.5rem, 5vw, 4rem);
+            letter-spacing: -0.02em;
+        }
+
+        h2 {
+            font-size: clamp(2rem, 4vw, 3rem);
+            letter-spacing: -0.01em;
+        }
+
+        h3 {
+            font-size: clamp(1.5rem, 3vw, 2rem);
+        }
+
+        p {
+            margin-bottom: 1rem;
+            color: var(--text-secondary);
+            line-height: 1.7;
+        }
+
+        .container {
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 0 2rem;
+        }
+
+        /* Навигация */
+        .navbar {
+            background: rgba(10, 10, 15, 0.95);
+            backdrop-filter: blur(20px);
+            border-bottom: 1px solid var(--medium-gray);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            padding: 1rem 0;
+        }
+
+        .nav-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 0 2rem;
+        }
+
+        .nav-logo {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            font-family: 'Orbitron', monospace;
+            font-weight: 800;
+            font-size: 1.5rem;
+            text-decoration: none;
+            color: var(--text);
+        }
+
+        .nav-logo img {
+            width: 40px;
+            height: 40px;
+            filter: drop-shadow(var(--glow));
+        }
+
+        .nav-menu {
+            display: flex;
+            gap: 0.5rem;
+        }
+
+        .nav-link {
+            color: var(--text);
+            text-decoration: none;
+            font-weight: 500;
+            font-size: 0.95rem;
+            padding: 0.75rem 1.25rem;
+            border-radius: var(--border-radius-sm);
+            transition: var(--transition);
+            position: relative;
+        }
+
+        .nav-link:hover {
+            color: var(--primary);
+            background: rgba(0, 255, 136, 0.1);
+        }
+
+        .nav-link.active {
+            color: var(--primary);
+            background: rgba(0, 255, 136, 0.1);
+        }
+
+        .nav-link.active::after {
+            content: '';
+            position: absolute;
+            bottom: -1px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 4px;
+            height: 4px;
+            background: var(--primary);
+            border-radius: 50%;
+        }
+
+        /* Хлебные крошки */
+        .breadcrumb {
+            max-width: 1400px;
+            margin: 2rem auto;
+            padding: 0 2rem;
+            display: flex;
+            align-items: center;
+            gap: 0.75rem;
+            font-size: 0.9rem;
+        }
+
+        .breadcrumb-item {
+            display: flex;
+            align-items: center;
+            gap: 0.75rem;
+        }
+
+        .breadcrumb-link {
+            color: var(--text-secondary);
+            text-decoration: none;
+            transition: var(--transition);
+        }
+
+        .breadcrumb-link:hover {
+            color: var(--primary);
+        }
+
+        .breadcrumb-separator {
+            color: var(--light-gray);
+        }
+
+        .breadcrumb-current {
+            color: var(--primary);
+            font-weight: 500;
+        }
+
+        /* Hero Section */
+        .hero-banner {
+            background: linear-gradient(135deg, var(--dark-gray) 0%, var(--dark) 100%);
+            padding: clamp(4rem, 10vw, 8rem) 2rem;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .hero-banner::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: 
+                radial-gradient(circle at 20% 80%, rgba(0, 255, 136, 0.1) 0%, transparent 50%),
+                radial-gradient(circle at 80% 20%, rgba(123, 97, 255, 0.1) 0%, transparent 50%);
+            animation: pulse 8s ease-in-out infinite;
+        }
+
+        .hero-content {
+            position: relative;
+            z-index: 2;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .hero-subtitle {
+            font-size: clamp(1.1rem, 2.5vw, 1.4rem);
+            color: var(--text-secondary);
+            margin-bottom: 2.5rem;
+            line-height: 1.6;
+        }
+
+        /* Фильтры категорий */
+        .category-filters {
+            display: flex;
+            justify-content: center;
+            gap: 1rem;
+            margin: 2rem 0;
+            flex-wrap: wrap;
+        }
+
+        .filter-btn {
+            background: rgba(255, 255, 255, 0.05);
+            border: 1px solid var(--light-gray);
+            padding: 0.75rem 1.5rem;
+            border-radius: var(--border-radius);
+            color: var(--text);
+            cursor: pointer;
+            transition: var(--transition);
+            font-weight: 500;
+        }
+
+        .filter-btn:hover, .filter-btn.active {
+            background: rgba(0, 255, 136, 0.1);
+            border-color: var(--primary);
+            color: var(--primary);
+            box-shadow: var(--glow);
+        }
+
+        /* Карточки гайдов */
+        .guides-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+            gap: 2rem;
+            margin: 3rem 0;
+        }
+
+        .guide-card {
+            background: var(--card-bg);
+            border: 1px solid var(--medium-gray);
+            border-radius: var(--border-radius-lg);
+            overflow: hidden;
+            transition: var(--transition);
+            position: relative;
+            cursor: pointer;
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .guide-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 4px;
+            background: var(--gradient);
+        }
+
+        .guide-card:hover {
+            transform: translateY(-8px);
+            border-color: var(--primary);
+            box-shadow: var(--glow), var(--shadow-hover);
+        }
+
+        .guide-image {
+            height: 180px;
+            width: 100%;
+            background: var(--dark-gray);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .guide-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: var(--transition-slow);
+        }
+
+        .guide-card:hover .guide-image img {
+            transform: scale(1.05);
+        }
+
+        .guide-category {
+            position: absolute;
+            top: 1rem;
+            left: 1rem;
+            background: rgba(0, 0, 0, 0.7);
+            padding: 0.4rem 0.8rem;
+            border-radius: var(--border-radius-sm);
+            font-size: 0.8rem;
+            font-weight: 500;
+            backdrop-filter: blur(10px);
+        }
+
+        .guide-content {
+            padding: 1.5rem;
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .guide-title {
+            font-size: 1.25rem;
+            margin-bottom: 0.75rem;
+            line-height: 1.3;
+        }
+
+        .guide-description {
+            color: var(--text-secondary);
+            font-size: 0.9rem;
+            margin-bottom: 1.5rem;
+            flex: 1;
+        }
+
+        .guide-meta {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-top: auto;
+            font-size: 0.85rem;
+            color: var(--text-muted);
+        }
+
+        .guide-difficulty {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .difficulty-dots {
+            display: flex;
+            gap: 0.25rem;
+        }
+
+        .dot {
+            width: 6px;
+            height: 6px;
+            border-radius: 50%;
+            background: var(--light-gray);
+        }
+
+        .dot.active {
+            background: var(--primary);
+        }
+
+        .guide-read-time {
+            display: flex;
+            align-items: center;
+            gap: 0.25rem;
+        }
+
+        /* Кнопки */
+        .btn {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            gap: 0.75rem;
+            padding: 1rem 2rem;
+            font-family: 'Inter', sans-serif;
+            font-size: 1rem;
+            font-weight: 600;
+            text-decoration: none;
+            border: none;
+            border-radius: var(--border-radius);
+            cursor: pointer;
+            transition: var(--transition);
+            position: relative;
+            overflow: hidden;
+            outline: none;
+        }
+
+        .btn::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+            transition: left 0.6s;
+        }
+
+        .btn:hover::before {
+            left: 100%;
+        }
+
+        .btn-primary {
+            background: var(--gradient);
+            color: var(--dark);
+            box-shadow: var(--glow);
+        }
+
+        .btn-primary:hover {
+            transform: translateY(-2px);
+            box-shadow: var(--glow), 0 12px 30px rgba(0, 255, 136, 0.3);
+        }
+
+        .btn-secondary {
+            background: transparent;
+            color: var(--text);
+            border: 2px solid var(--primary);
+            backdrop-filter: blur(10px);
+        }
+
+        .btn-secondary:hover {
+            background: rgba(0, 255, 136, 0.1);
+            border-color: var(--primary-light);
+            box-shadow: var(--glow);
+            transform: translateY(-2px);
+        }
+
+        /* Пагинация */
+        .pagination {
+            display: flex;
+            justify-content: center;
+            gap: 0.5rem;
+            margin: 3rem 0;
+        }
+
+        .page-btn {
+            width: 40px;
+            height: 40px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: rgba(255, 255, 255, 0.05);
+            border: 1px solid var(--medium-gray);
+            border-radius: var(--border-radius-sm);
+            color: var(--text);
+            cursor: pointer;
+            transition: var(--transition);
+        }
+
+        .page-btn:hover, .page-btn.active {
+            background: rgba(0, 255, 136, 0.1);
+            border-color: var(--primary);
+            color: var(--primary);
+        }
+
+        /* Анимации */
+        @keyframes pulse {
+            0%, 100% { opacity: 0.5; }
+            50% { opacity: 1; }
+        }
+
+        @keyframes float {
+            0%, 100% { transform: translateY(0px); }
+            50% { transform: translateY(-10px); }
+        }
+
+        .floating {
+            animation: float 3s ease-in-out infinite;
+        }
+
+        /* Адаптивность */
+        @media (max-width: 768px) {
+            .nav-container {
+                flex-direction: column;
+                gap: 1rem;
+                padding: 1rem;
+            }
+            
+            .nav-menu {
+                flex-wrap: wrap;
+                justify-content: center;
+                gap: 0.25rem;
+            }
+            
+            .nav-link {
+                padding: 0.5rem 1rem;
+                font-size: 0.9rem;
+            }
+            
+            .guides-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .category-filters {
+                gap: 0.5rem;
+            }
+            
+            .filter-btn {
+                padding: 0.6rem 1rem;
+                font-size: 0.85rem;
+            }
+        }
+</style>
+
