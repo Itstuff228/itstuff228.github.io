@@ -1,5 +1,5 @@
 User-agent: *
-Allow: /
+Allow: https://itstuff228.github.io
 Disallow: /admin/
 Disallow: /cgi-bin/
 Disallow: /search/
@@ -17,8 +17,8 @@ Allow: /forum.html
 Crawl-delay: 2
 
 # Sitemap
-Sitemap: https://deadlock-guides.ru/sitemap.xml
-Sitemap: https://deadlock-guides.ru/sitemap-index.xml
+Sitemap: https://itstuff228.github.io/sitemap.xml
+
 
 # Поисковые системы
 User-agent: Googlebot
@@ -53,21 +53,6 @@ Allow: /
 Disallow: /admin/
 Crawl-delay: 1
 
-# Запрет плохих ботов
-User-agent: MJ12bot
-Disallow: /
-
-User-agent: AhrefsBot
-Disallow: /
-
-User-agent: SemrushBot
-Disallow: /
-
-User-agent: DotBot
-Disallow: /
-
-User-agent: MauiBot
-Disallow: /
 
 # Разрешение для Google Image
 User-agent: Googlebot-Image
@@ -78,4 +63,5 @@ Disallow: /admin/
 # Разрешение для Google Ads
 User-agent: AdsBot-Google
 Allow: /
+
 Disallow: /admin/
