@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="ru">
 <head>
@@ -14,10 +13,8 @@
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://itstuff228.github.io/">
     
- 
     <link rel="stylesheet" href="css/style.css">
     
- 
     <script type="application/ld+json">
     {
         "@context": "https://schema.org",
@@ -49,29 +46,29 @@
 </head>
 <body itemscope itemtype="https://schema.org/WebPage">
 
-  
-    <nav class="navbar">
+    <!-- Навигация -->
+    <nav class="navbar" aria-label="Основная навигация">
         <div class="nav-container">
             <a href="index.html" class="nav-logo">
                 <span>DEADLOCK GUIDES</span>
             </a>
 
             <div class="nav-menu">
-                <a href="index.html" class="nav-link">
-                    <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                <a href="index.html" class="nav-link" aria-current="page">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
                         <path d="M10 20v-6h4v6h5v-8h3L12 3 2 12h3v8z"/>
                     </svg>
                     Главная
                 </a>
                
                 <a href="guide_main.html" class="nav-link">
-                    <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
                         <path d="M18 2H6c-1.1 0-2 .9-2 2v16c0 1.1.9 2 2 2h12c1.1 0 2-.9 2-2V4c0-1.1-.9-2-2-2zM6 4h5v8l-2.5-1.5L6 12V4z"/>
                     </svg>
                     Гайды
                 </a>
                 <a href="forum.html" class="nav-link">
-                    <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
                         <path d="M20 2H4c-1.1 0-1.99.9-1.99 2L2 22l4-4h14c1.1 0 2-.9 2-2V4c0-1.1-.9-2-2-2zm-2 12H6v-2h12v2zm0-3H6V9h12v2zm0-3H6V6h12v2z"/>
                     </svg>
                     Форум
@@ -80,13 +77,13 @@
 
             <div class="nav-auth">
                 <a href="login.html" class="btn btn-secondary btn-sm">
-                    <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
+                    <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
                         <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-1 16H7v-2h4v2zm5.25-4.5H7v-2h10.25v2z"/>
                     </svg>
                     Войти
                 </a>
                 <a href="register.html" class="btn btn-primary btn-sm">
-                    <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
+                    <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
                         <path d="M19 13h-6v6h-2v-6H5v-2h6V5h2v6h6v2z"/>
                     </svg>
                     Регистрация
@@ -95,132 +92,131 @@
         </div>
     </nav>
 
-    <!-- Основной контент главной страницы -->
-    <main>
+    <!-- Основной контент -->
+    <main id="main" role="main" aria-live="polite">
         <div class="mother__container__main">
             <!-- Хлебные крошки -->
-            <nav class="breadcrumb">
+            <nav class="breadcrumb" aria-label="Хлебные крошки">
                 <div class="breadcrumb-item">
                     <a class="breadcrumb-link" href="index.html">Главная</a>
-                
                 </div>
             </nav>
 
-        
-            <section class="hero-banner">
+            <!-- Главный баннер -->
+            <section class="hero-banner" aria-labelledby="main-title">
                 <div class="hero-content">
-                    <h1>DEADLOCK GUIDES</h1>
+                    <h1 id="main-title">DEADLOCK GUIDES</h1>
                     <p class="hero-subtitle">
                         Стань мастером Deadlock! Полные гайды, актуальные сборки и активное сообщество. 
                         От новичка до профессионала за несколько дней.
                     </p>
-                    
                 </div>
             </section>
 
-        
+            <!-- Основные разделы -->
             <div class="container">
+                <h2 class="visually-hidden">Основные разделы сайта</h2>
                 <div class="grid grid-3">
                     <!-- Для новичков -->
-                    <div class="card" id="guides">
+                    <section class="card" id="guides" aria-labelledby="guides-title">
                         <div class="card-header">
-                            <h3>🎯 Основы Deadlock</h3>
+                            <h3 id="guides-title">🎯 Основы Deadlock</h3>
                             <p class="card-subtitle">Полное руководство для начинающих игроков</p>
                         </div>
                         <div class="card-body">
                             <div class="guide-list">
-                                <div class="guide-item" onclick="$('#main').load('./html/guide_card_basic.html');">
+                                <a href="./html/guide_card_basic.html" class="guide-item">
                                     <span class="guide-icon">⚡</span>
                                     <div class="guide-content">
                                         <strong>Базовое руководство</strong>
                                         <span>Основы геймплея Deadlock</span>
                                     </div>
-                                    <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                                    <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
                                         <path d="M10 6L8.59 7.41 13.17 12l-4.58 4.59L10 18l6-6z"/>
                                     </svg>
-                                </div>
-                                <div class="guide-item">
+                                </a>
+                                <a href="#" class="guide-item">
                                     <span class="guide-icon">🎮</span>
                                     <div class="guide-content">
                                         <strong>Оптимальные настройки</strong>
                                         <span>Графика и управление</span>
                                     </div>
-                                    <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                                    <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
                                         <path d="M10 6L8.59 7.41 13.17 12l-4.58 4.59L10 18l6-6z"/>
                                     </svg>
-                                </div>
-                                <div class="guide-item">
+                                </a>
+                                <a href="#" class="guide-item">
                                     <span class="guide-icon">💰</span>
                                     <div class="guide-content">
                                         <strong>Экономика игры</strong>
                                         <span>Заработок и траты</span>
                                     </div>
-                                    <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                                    <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
                                         <path d="M10 6L8.59 7.41 13.17 12l-4.58 4.59L10 18l6-6z"/>
                                     </svg>
-                                </div>
+                                </a>
                             </div>
                         </div>
                         <div class="card-footer">
-                            <button class="btn btn-secondary btn-full">
-                                <span onclick="$('#main').load('./html/guide_main.html'); return false;">Все гайды для новичков</span>
-                                <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
+                            <a href="./html/guide_main.html" class="btn btn-secondary btn-full">
+                                <span>Все гайды для новичков</span>
+                                <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
                                     <path d="M9 5v2h6.59L4 18.59 5.41 20 17 8.41V15h2V5z"/>
                                 </svg>
-                            </button>
+                            </a>
                         </div>
-                    </div>
+                    </section>
 
                     <!-- Популярные герои -->
-                    <div class="card" id="heroes">
+                    <section class="card" id="heroes" aria-labelledby="heroes-title">
                         <div class="card-header">
-                            <h3>🦸 Топ герои</h3>
+                            <h3 id="heroes-title">🦸 Топ герои</h3>
                             <p class="card-subtitle">Самые популярные герои в текущем мете</p>
                         </div>
                         <div class="card-body">
                             <div class="heroes-grid">
                                 <div class="hero-card floating">
-                                    <img src="images/heroes/kelvin.webp" alt="Kelvin" loading="lazy">
+                                    <img src="images/heroes/kelvin.webp" alt="Kelvin - герой класса Танк" loading="lazy">
                                     <div class="hero-name">Kelvin</div>
                                     <div class="hero-role">Танк</div>
                                 </div>
                                 <div class="hero-card floating" style="animation-delay: 0.2s;">
-                                    <img src="images/heroes/vindicta.webp" alt="Vindicta" loading="lazy">
+                                    <img src="images/heroes/vindicta.webp" alt="Vindicta - герой класса Снайпер" loading="lazy">
                                     <div class="hero-name">Vindicta</div>
                                     <div class="hero-role">Снайпер</div>
                                 </div>
                                 <div class="hero-card floating" style="animation-delay: 0.4s;">
-                                    <img src="images/heroes/wraith.webp" alt="Wraith" loading="lazy">
+                                    <img src="images/heroes/wraith.webp" alt="Wraith - герой класса Маг" loading="lazy">
                                     <div class="hero-name">Wraith</div>
                                     <div class="hero-role">Маг</div>
                                 </div>
                                 <div class="hero-card floating" style="animation-delay: 0.6s;">
-                                    <img src="images/heroes/victor.webp" alt="Victor" loading="lazy">
+                                    <img src="images/heroes/victor.webp" alt="Victor - герой класса Танк" loading="lazy">
                                     <div class="hero-name">Victor</div>
                                     <div class="hero-role">Танк</div>
                                 </div>
                             </div>
                         </div>
                         <div class="card-footer">
-                            <button class="btn btn-primary btn-full">
+                            <a href="./html/all_heroes.html" class="btn btn-primary btn-full">
                                 <span>Смотреть всех героев</span>
-                                <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
+                                <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
                                     <path d="M15.5 14h-.79l-.28-.27C15.41 12.59 16 11.11 16 9.5 16 5.91 13.09 3 9.5 3S3 5.91 3 9.5 5.91 16 9.5 16c1.61 0 3.09-.59 4.23-1.57l.27.28v.79l5 4.99L20.49 19l-4.99-5zm-6 0C7.01 14 5 11.99 5 9.5S7.01 5 9.5 5 14 7.01 14 9.5 11.99 14 9.5 14z"/>
                                 </svg>
-                            </button>
+                            </a>
                         </div>
-                    </div>
+                    </section>
 
-                    <!-- сообщество -->
-                    <div class="card" id="forum">
+                    <!-- Сообщество -->
+                    <section class="card" id="forum" aria-labelledby="forum-title">
                         <div class="card-header">
-                            <h3>💬 Сообщество</h3>
+                            <h3 id="forum-title">💬 Сообщество</h3>
                             <p class="card-subtitle">Присоединяйтесь к русскоязычному сообществу</p>
                         </div>
                         <div class="card-body">
                             <div class="community-stats">
                                 <div class="stat">
-                                    <div class="stat-number" id="online-count">1,247</div>
+                                    <div class="stat-number" id="online-count-main">1,247</div>
                                     <div class="stat-label">сейчас онлайн</div>
                                 </div>
                                 <div class="stat">
@@ -235,40 +231,41 @@
 
                             <div class="active-threads">
                                 <h4>🔥 Активные обсуждения</h4>
-                                <div class="thread-preview">
+                                <a href="./html/forum_topic.html" class="thread-preview">
                                     <div class="thread-title">Лучший герой для старта в Deadlock?</div>
                                     <div class="thread-meta">
                                         <span class="thread-author">@PlayerOne</span>
                                         <span>15 ответов</span>
                                         <span>2 ч назад</span>
                                     </div>
-                                </div>
-                                <div class="thread-preview">
+                                </a>
+                                <a href="./html/forum_topic.html" class="thread-preview">
                                     <div class="thread-title">Патч 0.5 - полный разбор изменений</div>
                                     <div class="thread-meta">
                                         <span class="thread-author">@ProGamer</span>
                                         <span>42 ответа</span>
                                         <span>5 ч назад</span>
                                     </div>
-                                </div>
+                                </a>
                             </div>
                         </div>
                         <div class="card-footer">
-                            <button class="btn btn-accent btn-full" href="./html/forum.html">
+                            <a href="./html/forum.html" class="btn btn-accent btn-full">
                                 <span>Перейти на форум</span>
-                                <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
+                                <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
                                     <path d="M20 2H4c-1.1 0-1.99.9-1.99 2L2 22l4-4h14c1.1 0 2-.9 2-2V4c0-1.1-.9-2-2-2zm-2 12H6v-2h12v2zm0-3H6V9h12v2zm0-3H6V6h12v2z"/>
                                 </svg>
-                            </button>
+                            </a>
                         </div>
-                    </div>
+                    </section>
                 </div>
             </div>
 
-            <article class="article-content">
+            <!-- Основная статья -->
+            <article class="article-content" aria-labelledby="article-title">
                 <!-- Введение -->
                 <section class="intro-section">
-                    <h1>Deadlock Guides: Ваш путь к мастерству в игре Deadlock</h1>
+                    <h2 id="article-title">Deadlock Guides: Ваш путь к мастерству в игре Deadlock</h2>
                     <p class="lead-text">
                         Добро пожаловать в крупнейшее русскоязычное сообщество по игре Deadlock! 
                         Наш проект создан игроками для игроков — чтобы каждый мог быстро прогрессировать, 
@@ -277,8 +274,8 @@
                 </section>
 
                 <!-- Что такое Deadlock Guides -->
-                <section>
-                    <h2>Что такое Deadlock Guides?</h2>
+                <section aria-labelledby="what-is-title">
+                    <h3 id="what-is-title">Что такое Deadlock Guides?</h3>
                     <p>
                         Deadlock Guides - это не просто сайт с гайдами. Это полноценная экосистема для игроков Deadlock, 
                         включающая в себя:
@@ -286,25 +283,25 @@
 
                     <div class="feature-grid">
                         <div class="feature-card">
-                            <div class="feature-icon">📚</div>
+                            <div class="feature-icon" aria-hidden="true">📚</div>
                             <h4>Полные гайды</h4>
                             <p>Пошаговые руководства от основ геймплея до продвинутых тактик для опытных игроков.</p>
                         </div>
 
                         <div class="feature-card">
-                            <div class="feature-icon">🦸</div>
+                            <div class="feature-icon" aria-hidden="true">🦸</div>
                             <h4>База героев</h4>
                             <p>Подробные разборы всех героев с оптимальными сборками, способностями и тактиками.</p>
                         </div>
 
                         <div class="feature-card">
-                            <div class="feature-icon">💬</div>
+                            <div class="feature-icon" aria-hidden="true">💬</div>
                             <h4>Активный форум</h4>
                             <p>Сообщество единомышленников, где можно задать вопросы и поделиться опытом.</p>
                         </div>
 
                         <div class="feature-card">
-                            <div class="feature-icon">🔄</div>
+                            <div class="feature-icon" aria-hidden="true">🔄</div>
                             <h4>Актуальные обновления</h4>
                             <p>Своевременные разборы патчей, изменений баланса и новых механик игры.</p>
                         </div>
@@ -312,8 +309,8 @@
                 </section>
 
                 <!-- Почему стоит использовать наш сайт -->
-                <section>
-                    <h2>6 причин использовать Deadlock Guides</h2>
+                <section aria-labelledby="reasons-title">
+                    <h3 id="reasons-title">6 причин использовать Deadlock Guides</h3>
 
                     <div class="benefit-list">
                         <div class="benefit-item">
@@ -356,24 +353,23 @@
             </article>
 
             <!-- CTA Section -->
-            <section class="cta-section" id="cta">
+            <section class="cta-section" id="cta" aria-labelledby="cta-title">
                 <div class="container">
                     <div class="cta-content text-center">
-                        <h2>Готов стать профессионалом в Deadlock?</h2>
+                        <h2 id="cta-title">Готов стать профессионалом в Deadlock?</h2>
                         <p class="lead">Присоединяйся к сообществу Deadlock Guides и выходи на новый уровень игры!</p>
                         <div class="cta-buttons">
-                            <button  class="btn btn-primary btn-lg" onclick="window.location.href='guide_main.html'">
+                            <a href="guide_main.html" class="btn btn-primary btn-lg">
                                 <span>🚀 Начать сейчас</span>
-                            </button>
-                           
+                            </a>
                         </div>
                     </div>
                 </div>
             </section>
         </div>
     </main>
-   
 
+    <!-- Подвал -->
     <footer class="footer" role="contentinfo">
         <div class="footer-container">
             <!-- Основные разделы -->
@@ -382,12 +378,12 @@
                 <div class="footer-section">
                     <h3 class="footer-title">Навигация</h3>
                     <ul class="footer-links">
-                        <li><a href="#" onclick="$('#main').load('./html/main_page.html');">Главная</a></li>
-                        <li><a href="#" onclick="$('#main').load('./html/all_heroes.html');">Все герои</a></li>
-                        <li><a href="#" onclick="$('#main').load('./html/guide_basic.html');">Гайды</a></li>
-                        <li><a href="#" onclick="$('#main').load('./html/forum.html');">Форум</a></li>
-                        <li><a href="#" onclick="$('#main').load('./html/strategies.html');">Стратегии</a></li>
-                        <li><a href="#" onclick="$('#main').load('./html/updates.html');">Обновления</a></li>
+                        <li><a href="index.html">Главная</a></li>
+                        <li><a href="./html/all_heroes.html">Все герои</a></li>
+                        <li><a href="./html/guide_main.html">Гайды</a></li>
+                        <li><a href="./html/forum.html">Форум</a></li>
+                        <li><a href="./html/strategies.html">Стратегии</a></li>
+                        <li><a href="./html/updates.html">Обновления</a></li>
                     </ul>
                 </div>
 
@@ -395,12 +391,12 @@
                 <div class="footer-section">
                     <h3 class="footer-title">Популярные герои</h3>
                     <ul class="footer-links">
-                        <li><a href="#" onclick="$('#main').load('./html/hero_kane.html');">Kane</a></li>
-                        <li><a href="#" onclick="$('#main').load('./html/hero_lynx.html');">Lynx</a></li>
-                        <li><a href="#" onclick="$('#main').load('./html/hero_wraith.html');">Wraith</a></li>
-                        <li><a href="#" onclick="$('#main').load('./html/hero_titan.html');">Titan</a></li>
-                        <li><a href="#" onclick="$('#main').load('./html/hero_aurora.html');">Aurora</a></li>
-                        <li><a href="#" onclick="$('#main').load('./html/all_heroes.html');">Все герои →</a></li>
+                        <li><a href="./html/hero_kane.html">Kane</a></li>
+                        <li><a href="./html/hero_lynx.html">Lynx</a></li>
+                        <li><a href="./html/hero_wraith.html">Wraith</a></li>
+                        <li><a href="./html/hero_titan.html">Titan</a></li>
+                        <li><a href="./html/hero_aurora.html">Aurora</a></li>
+                        <li><a href="./html/all_heroes.html">Все герои →</a></li>
                     </ul>
                 </div>
 
@@ -408,11 +404,11 @@
                 <div class="footer-section">
                     <h3 class="footer-title">Сообщество</h3>
                     <ul class="footer-links">
-                        <li><a href="#" onclick="$('#main').load('./html/forum.html');">Форум</a></li>
-                        <li><a href="#" onclick="$('#main').load('./html/leaderboard.html');">Таблица лидеров</a></li>
-                        <li><a href="#" onclick="$('#main').load('./html/streams.html');">Стримы</a></li>
-                        <li><a href="#" onclick="$('#main').load('./html/events.html');">События</a></li>
-                        <li><a href="#" onclick="$('#main').load('./html/contribute.html');">Внести вклад</a></li>
+                        <li><a href="./html/forum.html">Форум</a></li>
+                        <li><a href="./html/leaderboard.html">Таблица лидеров</a></li>
+                        <li><a href="./html/streams.html">Стримы</a></li>
+                        <li><a href="./html/events.html">События</a></li>
+                        <li><a href="./html/contribute.html">Внести вклад</a></li>
                     </ul>
                 </div>
 
@@ -420,11 +416,11 @@
                 <div class="footer-section">
                     <h3 class="footer-title">Ресурсы</h3>
                     <ul class="footer-links">
-                        <li><a href="#" onclick="$('#main').load('./html/beginner_guides.html');">Для новичков</a></li>
-                        <li><a href="#" onclick="$('#main').load('./html/advanced_guides.html');">Продвинутые гайды</a></li>
-                        <li><a href="#" onclick="$('#main').load('./html/patch_notes.html');">Патч-ноуты</a></li>
-                        <li><a href="#" onclick="$('#main').load('./html/downloads.html');">Загрузки</a></li>
-                        <li><a href="#" onclick="$('#main').load('./html/tools.html');">Инструменты</a></li>
+                        <li><a href="./html/beginner_guides.html">Для новичков</a></li>
+                        <li><a href="./html/advanced_guides.html">Продвинутые гайды</a></li>
+                        <li><a href="./html/patch_notes.html">Патч-ноуты</a></li>
+                        <li><a href="./html/downloads.html">Загрузки</a></li>
+                        <li><a href="./html/tools.html">Инструменты</a></li>
                     </ul>
                 </div>
 
@@ -432,34 +428,30 @@
                 <div class="footer-section">
                     <h3 class="footer-title">О проекте</h3>
                     <ul class="footer-links">
-                        <li><a href="#" onclick="$('#main').load('./html/about.html');">О нас</a></li>
-                        <li><a href="#" onclick="$('#main').load('./html/contact.html');">Контакты</a></li>
-                        <li><a href="#" onclick="$('#main').load('./html/rules.html');">Правила</a></li>
-                        <li><a href="#" onclick="$('#main').load('./html/privacy.html');">Конфиденциальность</a></li>
-                        <li><a href="#" onclick="$('#main').load('./html/terms.html');">Условия использования</a></li>
+                        <li><a href="./html/about.html">О нас</a></li>
+                        <li><a href="./html/contact.html">Контакты</a></li>
+                        <li><a href="./html/rules.html">Правила</a></li>
+                        <li><a href="./html/privacy.html">Конфиденциальность</a></li>
+                        <li><a href="./html/terms.html">Условия использования</a></li>
                     </ul>
                 </div>
             </div>
 
-           
-            
             <div class="footer-bottom">
                 <div class="footer-info">
                     <div class="footer-logo">
-                       
                         <span>DEADLOCK GUIDES</span>
                     </div>
                     
                     <div class="footer-meta">
                         <p>&copy; 2026 Deadlock Guides. Все права защищены.</p>
-                        
                         <p>Мы не аффилированы с разработчиками игры. Все гайды создаются сообществом.</p>
                     </div>
                 </div>
 
                 <div class="footer-stats">
                     <div class="stat-item">
-                        <div class="stat-number" id="online-count">1,247</div>
+                        <div class="stat-number" id="online-count-footer">1,247</div>
                         <div class="stat-label">сейчас онлайн</div>
                     </div>
                     <div class="stat-item">
@@ -475,171 +467,169 @@
         </div>
     </footer>
     
-    
     <script src="js/main.js"></script>
 </body>
 </html>
 
 <style>
-.guide-list {
-    display: flex;
-    flex-direction: column;
-    gap: 0.75rem;
-}
-
-.guide-item {
-    display: flex;
-    align-items: center;
-    gap: 1rem;
-    padding: 1rem;
-    background: rgba(255, 255, 255, 0.03);
-    border-radius: var(--border-radius-sm);
-    cursor: pointer;
-    transition: var(--transition);
-    border: 1px solid transparent;
-}
-
-.guide-item:hover {
-    background: rgba(0, 255, 136, 0.1);
-    border-color: var(--primary);
-    transform: translateX(5px);
-}
-
-.guide-icon {
-    font-size: 1.5rem;
-    width: 40px;
-    text-align: center;
-}
-
-.guide-content {
-    flex: 1;
-    display: flex;
-    flex-direction: column;
-    gap: 0.25rem;
-}
-
-.guide-content strong {
-    font-weight: 600;
-    color: var(--text);
-}
-
-.guide-content span {
-    font-size: 0.85rem;
-    color: var(--text-secondary);
-}
-
-.community-stats {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 1rem;
-    margin-bottom: 2rem;
-}
-
-.stat {
-    text-align: center;
-    padding: 1.5rem 1rem;
-    background: rgba(255, 255, 255, 0.03);
-    border-radius: var(--border-radius);
-    border: 1px solid var(--medium-gray);
-}
-
-.stat-number {
-    font-size: 1.5rem;
-    font-weight: 700;
-    background: var(--gradient-text);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    margin-bottom: 0.3rem;
-}
-
-.stat-label {
-    font-size: 0.8rem;
-    color: var(--text-secondary);
-}
-
-.active-threads {
-    margin-top: 1.5rem;
-}
-
-.active-threads h4 {
-    margin-bottom: 1rem;
-    font-size: 1.1rem;
-}
-
-.thread-preview {
-    background: rgba(255, 255, 255, 0.03);
-    padding: 1.25rem;
-    border-radius: var(--border-radius-sm);
-    margin-bottom: 0.8rem;
-    cursor: pointer;
-    transition: var(--transition);
-    border-left: 3px solid transparent;
-    border: 1px solid var(--medium-gray);
-}
-
-.thread-preview:hover {
-    border-left-color: var(--primary);
-    background: rgba(0, 255, 136, 0.05);
-    transform: translateX(5px);
-}
-
-.thread-title {
-    font-weight: 600;
-    margin-bottom: 0.5rem;
-    color: var(--text);
-}
-
-.thread-meta {
-    display: flex;
-    gap: 1rem;
-    font-size: 0.8rem;
-    color: var(--text-secondary);
-}
-
-.thread-author {
-    color: var(--primary);
-    font-weight: 500;
-}
-
-.cta-section {
-    background: linear-gradient(135deg, var(--dark-gray) 0%, var(--dark) 100%);
-    padding: 4rem 2rem;
-    margin-top: 4rem;
-    border-top: 1px solid var(--medium-gray);
-}
-
-.cta-content {
-    max-width: 600px;
-    margin: 0 auto;
-}
-
-.cta-buttons {
-    display: flex;
-    gap: 1.5rem;
-    justify-content: center;
-    margin-top: 2.5rem;
-    flex-wrap: wrap;
-}
-
-@media (max-width: 768px) {
-    .community-stats {
-        grid-template-columns: 1fr;
+    .visually-hidden {
+        position: absolute;
+        width: 1px;
+        height: 1px;
+        padding: 0;
+        margin: -1px;
+        overflow: hidden;
+        clip: rect(0, 0, 0, 0);
+        white-space: nowrap;
+        border: 0;
     }
-    
-    .thread-meta {
+
+    .guide-list {
+        display: flex;
+        flex-direction: column;
+        gap: 0.75rem;
+    }
+
+    .guide-item {
+        display: flex;
+        align-items: center;
+        gap: 1rem;
+        padding: 1rem;
+        background: rgba(255, 255, 255, 0.03);
+        border-radius: var(--border-radius-sm);
+        cursor: pointer;
+        transition: var(--transition);
+        border: 1px solid transparent;
+        text-decoration: none;
+        color: inherit;
+    }
+
+    .guide-item:hover {
+        background: rgba(0, 255, 136, 0.1);
+        border-color: var(--primary);
+        transform: translateX(5px);
+        text-decoration: none;
+    }
+
+    .guide-icon {
+        font-size: 1.5rem;
+        width: 40px;
+        text-align: center;
+    }
+
+    .guide-content {
+        flex: 1;
+        display: flex;
         flex-direction: column;
         gap: 0.25rem;
     }
-    
+
+    .guide-content strong {
+        font-weight: 600;
+        color: var(--text);
+    }
+
+    .guide-content span {
+        font-size: 0.85rem;
+        color: var(--text-secondary);
+    }
+
+    .community-stats {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 1rem;
+        margin-bottom: 2rem;
+    }
+
+    .stat {
+        text-align: center;
+        padding: 1.5rem 1rem;
+        background: rgba(255, 255, 255, 0.03);
+        border-radius: var(--border-radius);
+        border: 1px solid var(--medium-gray);
+    }
+
+    .stat-number {
+        font-size: 1.5rem;
+        font-weight: 700;
+        background: var(--gradient-text);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        margin-bottom: 0.3rem;
+    }
+
+    .stat-label {
+        font-size: 0.8rem;
+        color: var(--text-secondary);
+    }
+
+    .active-threads {
+        margin-top: 1.5rem;
+    }
+
+    .active-threads h4 {
+        margin-bottom: 1rem;
+        font-size: 1.1rem;
+    }
+
+    .thread-preview {
+        background: rgba(255, 255, 255, 0.03);
+        padding: 1.25rem;
+        border-radius: var(--border-radius-sm);
+        margin-bottom: 0.8rem;
+        cursor: pointer;
+        transition: var(--transition);
+        border-left: 3px solid transparent;
+        border: 1px solid var(--medium-gray);
+        display: block;
+        text-decoration: none;
+        color: inherit;
+    }
+
+    .thread-preview:hover {
+        border-left-color: var(--primary);
+        background: rgba(0, 255, 136, 0.05);
+        transform: translateX(5px);
+        text-decoration: none;
+    }
+
+    .thread-title {
+        font-weight: 600;
+        margin-bottom: 0.5rem;
+        color: var(--text);
+    }
+
+    .thread-meta {
+        display: flex;
+        gap: 1rem;
+        font-size: 0.8rem;
+        color: var(--text-secondary);
+    }
+
+    .thread-author {
+        color: var(--primary);
+        font-weight: 500;
+    }
+
+    .cta-section {
+        background: linear-gradient(135deg, var(--dark-gray) 0%, var(--dark) 100%);
+        padding: 4rem 2rem;
+        margin-top: 4rem;
+        border-top: 1px solid var(--medium-gray);
+    }
+
+    .cta-content {
+        max-width: 600px;
+        margin: 0 auto;
+    }
+
     .cta-buttons {
-        flex-direction: column;
-        align-items: center;
+        display: flex;
+        gap: 1.5rem;
+        justify-content: center;
+        margin-top: 2.5rem;
+        flex-wrap: wrap;
     }
-    
-    .cta-buttons .btn {
-        min-width: 250px;
-    }
-}
 
     /* Основные стили для статьи */
     .article-content {
@@ -690,7 +680,7 @@
     }
 
     /* Заголовки */
-    .article-content h1 {
+    .article-content h2 {
         font-size: 2.5rem;
         font-weight: 800;
         background: var(--gradient-text);
@@ -702,7 +692,7 @@
         letter-spacing: -0.5px;
     }
 
-    .article-content h2 {
+    .article-content h3 {
         font-size: 1.8rem;
         font-weight: 700;
         color: var(--text);
@@ -712,20 +702,13 @@
         line-height: 1.3;
     }
 
-    .article-content h3 {
+    .article-content h4 {
         font-size: 1.4rem;
         font-weight: 600;
         color: var(--text);
         margin: 1.5rem 0 1rem;
         padding-left: 0.75rem;
         border-left: 3px solid var(--accent);
-    }
-
-    .article-content h4 {
-        font-size: 1.2rem;
-        font-weight: 600;
-        color: var(--text);
-        margin: 1.25rem 0 0.75rem;
     }
 
     /* Текст */
@@ -875,17 +858,35 @@
 
     /* Адаптивность */
     @media (max-width: 768px) {
+        .community-stats {
+            grid-template-columns: 1fr;
+        }
+        
+        .thread-meta {
+            flex-direction: column;
+            gap: 0.25rem;
+        }
+        
+        .cta-buttons {
+            flex-direction: column;
+            align-items: center;
+        }
+        
+        .cta-buttons .btn {
+            min-width: 250px;
+        }
+        
         .article-content {
             padding: 1.5rem;
             margin: 2rem auto 0;
         }
         
-        .article-content h1 {
+        .article-content h2 {
             font-size: 2rem;
             padding: 0 1rem;
         }
         
-        .article-content h2 {
+        .article-content h3 {
             font-size: 1.5rem;
         }
         
@@ -912,11 +913,11 @@
             padding: 1.25rem;
         }
         
-        .article-content h1 {
+        .article-content h2 {
             font-size: 1.75rem;
         }
         
-        .article-content h2 {
+        .article-content h3 {
             font-size: 1.3rem;
         }
         
@@ -967,12 +968,10 @@
 // Обновление статистики онлайн
 function updateOnlineStats() {
     const online = Math.floor(1200 + Math.random() * 100);
-    document.getElementById('online-count').textContent = online.toLocaleString();
+    document.getElementById('online-count-main').textContent = online.toLocaleString();
+    document.getElementById('online-count-footer').textContent = online.toLocaleString();
 }
 
 setInterval(updateOnlineStats, 30000);
 updateOnlineStats();
 </script>
-
-
-
