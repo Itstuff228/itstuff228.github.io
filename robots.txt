@@ -1,5 +1,5 @@
 User-agent: *
-Allow: https://itstuff228.github.io
+Allow: /
 Disallow: /admin/
 Disallow: /cgi-bin/
 Disallow: /search/
@@ -7,13 +7,13 @@ Disallow: /*.pdf$
 Disallow: /*.zip$
 Disallow: /*.exe$
 
-# Разрешаем индексацию основных разделов
+
 Allow: /index.html
 Allow: /guide_main.html
 Allow: /guide_card_basic.html
 Allow: /forum.html
 
-# Скорость сканирования
+
 Crawl-delay: 2
 
 # Sitemap
@@ -54,7 +54,7 @@ Disallow: /admin/
 Crawl-delay: 1
 
 
-# Разрешение для Google Image
+
 User-agent: Googlebot-Image
 Allow: /images/
 Allow: /jpg/
@@ -65,3 +65,4 @@ User-agent: AdsBot-Google
 Allow: /
 
 Disallow: /admin/
+
