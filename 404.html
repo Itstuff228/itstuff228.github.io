@@ -1,0 +1,445 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Страница не найдена (404) | Deadlock Guides</title>
+    <meta name="description" content="Запрошенная страница не существует. Вернитесь на главную или найдите нужный гайд по Deadlock.">
+    <meta name="robots" content="noindex, follow">
+    
+    <!-- Favicon для различных платформ -->
+    <link rel="icon" type="image/x-icon" href="favicon/favicon.ico">
+    <link rel="icon" type="image/png" sizes="16x16" href="favicon/favicon-16x16.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="favicon/favicon-32x32.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="favicon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="192x192" href="favicon/android-chrome-192x192.png">
+    
+    <!-- Цвет темы браузера -->
+    <meta name="theme-color" content="#0a0e14">
+    <meta name="msapplication-TileColor" content="#0a0e14">
+    
+    <link rel="stylesheet" href="css/style.css">
+    
+    <style>
+        /* Специальные стили для страницы 404 */
+        .error-container {
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 2rem;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .error-container::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: 
+                radial-gradient(circle at 20% 20%, rgba(0, 255, 136, 0.03) 0%, transparent 40%),
+                radial-gradient(circle at 80% 80%, rgba(123, 97, 255, 0.03) 0%, transparent 40%),
+                radial-gradient(circle at 40% 60%, rgba(255, 45, 117, 0.02) 0%, transparent 40%);
+            z-index: -1;
+        }
+        
+        .error-content {
+            text-align: center;
+            max-width: 600px;
+            margin: 0 auto;
+            position: relative;
+            z-index: 2;
+        }
+        
+        .error-logo {
+            font-family: 'Orbitron', monospace;
+            font-weight: 800;
+            font-size: 1.8rem;
+            margin-bottom: 3rem;
+            background: linear-gradient(135deg, var(--primary) 0%, var(--secondary) 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+        
+        .error-animation {
+            position: relative;
+            margin-bottom: 2rem;
+        }
+        
+        .error-number {
+            font-family: 'Orbitron', monospace;
+            font-size: 8rem;
+            font-weight: 900;
+            background: linear-gradient(135deg, #ff2d75 0%, #7b61ff 50%, #00ff88 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            line-height: 1;
+            margin-bottom: 1rem;
+            position: relative;
+            z-index: 2;
+        }
+        
+        .error-number::before {
+            content: '404';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            z-index: -1;
+            background: linear-gradient(135deg, #ff2d75 0%, #7b61ff 50%, #00ff88 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            filter: blur(20px);
+            opacity: 0.5;
+        }
+        
+        .error-icon {
+            font-size: 4rem;
+            margin-bottom: 2rem;
+            background: linear-gradient(135deg, #ff2d75 0%, #7b61ff 50%, #00ff88 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            animation: float 3s ease-in-out infinite;
+        }
+        
+        .error-title {
+            font-size: 2rem;
+            margin-bottom: 1rem;
+            background: linear-gradient(135deg, var(--primary) 0%, var(--secondary) 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+        
+        .error-message {
+            color: var(--text-secondary);
+            margin-bottom: 2rem;
+            line-height: 1.6;
+            font-size: 1.1rem;
+        }
+        
+        .error-actions {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 1rem;
+            justify-content: center;
+            margin-top: 2rem;
+            margin-bottom: 3rem;
+        }
+        
+        .search-box {
+            margin: 2rem 0;
+            position: relative;
+            max-width: 500px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        
+        .search-input {
+            width: 100%;
+            padding: 1rem 1.5rem;
+            background: rgba(255, 255, 255, 0.05);
+            border: 1px solid var(--medium-gray);
+            border-radius: var(--border-radius);
+            color: var(--text);
+            font-size: 1rem;
+            transition: var(--transition);
+            backdrop-filter: blur(10px);
+            padding-right: 3rem;
+        }
+        
+        .search-input:focus {
+            outline: none;
+            border-color: var(--primary);
+            box-shadow: var(--glow);
+        }
+        
+        .search-button {
+            position: absolute;
+            right: 0.5rem;
+            top: 50%;
+            transform: translateY(-50%);
+            background: transparent;
+            border: none;
+            color: var(--text-secondary);
+            cursor: pointer;
+            padding: 0.5rem;
+            transition: var(--transition);
+        }
+        
+        .search-button:hover {
+            color: var(--primary);
+        }
+        
+        .popular-links {
+            margin-top: 3rem;
+            text-align: left;
+            background: var(--card-bg);
+            border: 1px solid var(--medium-gray);
+            border-radius: var(--border-radius-lg);
+            padding: 2rem;
+            backdrop-filter: blur(10px);
+        }
+        
+        .popular-links h3 {
+            margin-bottom: 1.5rem;
+            font-size: 1.2rem;
+            text-align: center;
+        }
+        
+        .links-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 1rem;
+        }
+        
+        .link-item {
+            background: rgba(255, 255, 255, 0.03);
+            border: 1px solid var(--medium-gray);
+            border-radius: var(--border-radius-sm);
+            padding: 1.5rem;
+            transition: var(--transition);
+        }
+        
+        .link-item:hover {
+            border-color: var(--primary);
+            transform: translateY(-3px);
+            box-shadow: var(--glow);
+        }
+        
+        .link-item a {
+            color: var(--text);
+            text-decoration: none;
+            display: block;
+            font-weight: 600;
+            margin-bottom: 0.5rem;
+        }
+        
+        .link-item a:hover {
+            color: var(--primary);
+        }
+        
+        .link-item p {
+            font-size: 0.9rem;
+            color: var(--text-secondary);
+            margin: 0;
+        }
+        
+        .footer-minimal {
+            background: transparent;
+            border: none;
+            padding: 2rem 0;
+            text-align: center;
+        }
+        
+        .footer-minimal .footer-logo {
+            justify-content: center;
+            margin-bottom: 1rem;
+        }
+        
+        @keyframes glitch {
+            0% {
+                transform: translate(0);
+            }
+            20% {
+                transform: translate(-2px, 2px);
+            }
+            40% {
+                transform: translate(-2px, -2px);
+            }
+            60% {
+                transform: translate(2px, 2px);
+            }
+            80% {
+                transform: translate(2px, -2px);
+            }
+            100% {
+                transform: translate(0);
+            }
+        }
+        
+        .glitch {
+            animation: glitch 0.5s ease-in-out;
+        }
+        
+        @media (max-width: 768px) {
+            .error-number {
+                font-size: 6rem;
+            }
+            
+            .error-icon {
+                font-size: 3rem;
+            }
+            
+            .error-title {
+                font-size: 1.5rem;
+            }
+            
+            .error-actions {
+                flex-direction: column;
+            }
+            
+            .error-actions .btn {
+                width: 100%;
+                justify-content: center;
+            }
+            
+            .links-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+        
+        @media (max-width: 480px) {
+            .error-number {
+                font-size: 4rem;
+            }
+            
+            .error-icon {
+                font-size: 2.5rem;
+            }
+            
+            .error-container {
+                padding: 1rem;
+            }
+            
+            .popular-links {
+                padding: 1.5rem;
+            }
+        }
+    </style>
+</head>
+<body itemscope itemtype="https://schema.org/WebPage">
+
+    <!-- Основной контент страницы 404 -->
+    <main>
+        <div class="error-container">
+            <div class="error-content">
+                <!-- Логотип без хедера -->
+                <div class="error-logo">DEADLOCK GUIDES</div>
+                
+                <div class="error-animation">
+                    <div class="error-number glitch">404</div>
+                    <div class="error-icon">⚡</div>
+                </div>
+                
+                <h1 class="error-title">Страница не найдена</h1>
+                
+                <p class="error-message">
+                    Вы попали в тупик на карте Deadlock! Запрошенная страница не существует или была перемещена.
+                    Не отчаивайтесь — даже лучшие игроки иногда теряются.
+                </p>
+                
+                <!-- Поиск на сайте -->
+                <!-- <div class="search-box">
+                    <form id="search-form" onsubmit="handleSearch(event)">
+                        <input 
+                            type="text" 
+                            class="search-input" 
+                            placeholder="Найти гайд, героя или статью..."
+                            id="search-input"
+                        >
+                        <button type="submit" class="search-button">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                                <path d="M15.5 14h-.79l-.28-.27C15.41 12.59 16 11.11 16 9.5 16 5.91 13.09 3 9.5 3S3 5.91 3 9.5 5.91 16 9.5 16c1.61 0 3.09-.59 4.23-1.57l.27.28v.79l5 4.99L20.49 19l-4.99-5zm-6 0C7.01 14 5 11.99 5 9.5S7.01 5 9.5 5 14 7.01 14 9.5 11.99 14 9.5 14z"/>
+                            </svg>
+                        </button>
+                    </form>
+                </div> -->
+                
+                <!-- Основные действия -->
+                <div class="error-actions">
+                    <a href="index.html" class="btn btn-primary">
+                        <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
+                            <path d="M10 20v-6h4v6h5v-8h3L12 3 2 12h3v8z"/>
+                        </svg>
+                        На главную
+                    </a>
+                    
+                    <a href="guide_main.html" class="btn btn-secondary">
+                        <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
+                            <path d="M18 2H6c-1.1 0-2 .9-2 2v16c0 1.1.9 2 2 2h12c1.1 0 2-.9 2-2V4c0-1.1-.9-2-2-2zM6 4h5v8l-2.5-1.5L6 12V4z"/>
+                        </svg>
+                        Все гайды
+                    </a>
+                    
+                    <button class="btn btn-accent" onclick="window.history.back()">
+                        <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
+                            <path d="M20 11H7.83l5.59-5.59L12 4l-8 8 8 8 1.41-1.41L7.83 13H20v-2z"/>
+                        </svg>
+                        Назад
+                    </button>
+                </div>
+                
+                <!-- Популярные разделы -->
+                <div class="popular-links">
+                    <h3>🎯 Популярные разделы</h3>
+                    <div class="links-grid">
+                        <div class="link-item">
+                            <a href="guide_card_basic.html">Базовое руководство</a>
+                            <p>Освойте основы Deadlock с нуля</p>
+                        </div>
+                        
+                        <div class="link-item">
+                            <a href="guide_main.html">Все гайды</a>
+                            <p>Тактики, сборки и стратегии</p>
+                        </div>
+                        
+                        <div class="link-item">
+                            <a href="forum.html">Форум</a>
+                            <p>Задайте вопрос сообществу</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+
+
+    <script>
+        
+        document.addEventListener('DOMContentLoaded', function() {
+            const errorNumber = document.querySelector('.error-number');
+            
+           
+            setTimeout(() => {
+                errorNumber.classList.remove('glitch');
+                setTimeout(() => {
+                    errorNumber.classList.add('glitch');
+                }, 100);
+            }, 1000);
+        });
+        
+        // Обработка поиска
+        function handleSearch(event) {
+            event.preventDefault();
+            const searchInput = document.getElementById('search-input');
+            const query = searchInput.value.trim();
+            
+            if (query) {
+                // здесь будет перенаправление на страницу поиска
+                // window.location.href = `/search?q=${encodeURIComponent(query)}`;
+                
+                // Временно показываем сообщение
+                alert(`Поиск: "${query}"\n\n вы будете перенаправлены на страницу поиска.`);
+                searchInput.value = '';
+            }
+        }
+        
+        
+        document.addEventListener('keydown', function(e) {
+            if ((e.ctrlKey || e.metaKey) && e.key === 'f') {
+                e.preventDefault();
+                document.getElementById('search-input').focus();
+            }
+        });
+    </script>
+</body>
+</html>
