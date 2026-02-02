@@ -2,7 +2,7 @@ permalink: pretty
 plugins:
   - jekyll-feed
 
-# Настройка 404 страницы для GitHub Pages
+
 title: Deadlock Guides
 description: Русскоязычные гайды по Deadlock
 baseurl: "" 
